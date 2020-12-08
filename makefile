@@ -9,11 +9,8 @@ app-info = '$(repository)/info.AppInfo=$(INFO)'
 
 LD_FLAGS ?="-X $(go-version) -X $(app-info)"
 
-build:
-	go build -v -ldflags=$(LD_FLAGS) -tags develop $(DIR)
-
-run: build
-	./$(APP-NAME)
+run:
+	go run -v -ldflags=$(LD_FLAGS) -tags develop $(DIR)
 
 docker-run:
 	docker run 	\
