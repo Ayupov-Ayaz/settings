@@ -11,5 +11,6 @@ func main() {
 	fmt.Println("golang version", version.GoVersion)
 	fmt.Println("app info", info.AppInfo)
 	fmt.Println("is prod", util.IsProd)
+	fmt.Println("remote", util.Remote)
 }
 
